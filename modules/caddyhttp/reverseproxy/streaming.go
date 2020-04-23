@@ -36,7 +36,7 @@ func (h Handler) handleUpgradeResponse(rw http.ResponseWriter, req *http.Request
 	}
 
 	copyHeader(rw.Header(), res.Header)
-
+test
 	hj, ok := rw.(http.Hijacker)
 	if !ok {
 		// p.getErrorHandler()(rw, req, fmt.Errorf("can't switch protocols using non-Hijacker ResponseWriter type %T", rw))
