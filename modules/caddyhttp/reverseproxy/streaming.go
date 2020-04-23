@@ -35,7 +35,7 @@ func (h Handler) handleUpgradeResponse(rw http.ResponseWriter, req *http.Request
 		return
 	}
 
-	copyHeader(res.Header, rw.Header())
+	copyHeader(rw.Header(), res.Header)
 
 	hj, ok := rw.(http.Hijacker)
 	if !ok {
